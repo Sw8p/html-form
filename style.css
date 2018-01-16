@@ -1,0 +1,80 @@
+@font-face{
+    font-family: 'Droid';
+    src: url("DroidSansFallbackFull.ttf");
+}
+body{
+    font-family: 'Droid', 'trebuchet ms', sans-serif;
+    font-size: 90%;
+}
+
+form{
+    width: 40%;
+    background-color: lemonchiffon;
+    
+}
+fieldset{
+    border: 1px solid darkgoldenrod;
+    border-radius: 0 10% 10% 0;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 1%;
+}
+fieldset:first-child{
+    border-radius: 10% 0 10% 0;
+}
+fieldset:last-child{
+    border-radius: 0 10% 0 10%;
+}
+
+legend{
+    color: darkcyan;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px darkslategrey;
+}
+legend:first-letter{
+    font-size: 2em;
+    font-weight: 800;
+    color: darkcyan;
+}
+
+label{
+    color: darkslategrey;
+    display: block;
+    margin-top: 1%;
+}
+fieldset:last-child label{
+    display: inline-block;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+input, textarea, select, option{
+    background-color: oldlace;
+}
+input, textarea, select{
+    padding: 0.5em;
+    border: 1px solid darkslategrey;
+    border-radius: 0.5em;
+    
+}
+input, textarea{
+    box-shadow: 1px 1px 2px darkgoldenrod inset;
+}
+select, option{
+    box-shadow: -1px -1px 2px darkgoldenrod inset;
+    cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    background-color: transparent;
+    border: none;
+    width: 10px;
+    cursor: pointer;
+}
+input[type="submit"], input[type="reset"]{
+    /*width: 80%;*/
+    /*margin-left: 15%;*/
+    box-shadow: -1px -1px 2px darkslategrey inset;
+    cursor: pointer;
+}

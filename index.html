@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>les Formulaires</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+<!-- envoit formulair = 
+- une action = une url qui recup data (exp: une add mail)
+- une methode d'envoit -> get ou post
+    GET donne info ds URL ; POST data en variable (pr info sensibles)
+- un encryptage
+- un nom
+- un id
+...
+-->
+        <form action="mailto:tot@bidon.net" method="get" enctype="text/plain" name="Formulaire">
+            <!--FIELDSET - cadre intitulé par legend
+             tab navigation entre les labels -->
+            <fieldset> 
+                <legend>Identité</legend>
+                <label>Nom :
+                    <input name="nom" type="text" id="nom" autofocus="on" placeholder="Ton Nom" for="nom"/>
+                    <!--autofocus place par déf le curseur ds l'input-->
+                </label>
+                <br/>
+                <label>Prénom :
+                    <input name="prenom" type="text" id="prenom" placeholder="Ton Prénom" for="prenom"/>
+                    <!--prop VALUE prérempli le champ / PLACEHOLDER donne indiquation effaçables quand champ selec-->
+                </label>
+                <br/>
+                <label>Age :
+                    <input name="age" type="text" id="age" placeholder="Ton Age" for="age"/>
+                    <!-- FOR= cursuer auto position en référence à l'id du champ-->
+                </label>
+                <br/>
+                <label>Genre :
+                    <select name="genre" id="genre">
+                        <option>Faites un choix</option>
+                        <option value="masculin">Masculin</option>
+                        <option value="feminin">Féminin</option>
+                        <option value="...">...</option>
+                    </select>
+                </label>
+                <br/>
+                <label>Adresse :
+                    <textarea name="adresse" rows="3" id="adresse" for="adresse"></textarea>
+                </label>
+                <br/>
+                <label>Ville :
+                    <select name="ville" id="ville">
+                        <option>Choix d'une ville</option>
+                        <option value="aubeterre">Aubeterre</option>
+                        <option value="montmoreau">Montmoreau</option>
+                        <option value="angouleme">Angouleme</option>
+                        <option value="saintes">Saintes</option>
+                    </select>
+                </label>
+                <br/>
+                <label>Code postal :
+                    <select name="cp" id="cp">
+                        <option>Choix d'un code postale</option>
+                        <option value="aubeterre">16...</option>
+                        <option value="montmoreau">16...</option>
+                        <option value="angouleme">16000</option>
+                        <option value="saintes">17100</option>
+                    </select>
+                </label>
+                <br/>
+                <label>Email :
+                    <input name="email" type="text" id="email" value="adresse@mail.com">
+                </label>
+                <br/>
+                <label>Tel :
+                    <input name="tel" type="text" id="tel" maxlength="10" size="15" for="tel">
+                    <!--size déf nbr de caractères contenu dans l'input-->
+                </label>
+                <br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Activités</legend>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0"><!--def tableau-->
+                    <tr><!--balise ligne - row-->
+                        <td><!--balise colonne - column-->
+                            <label>
+                                <input name="activite" type="checkbox" id="activite" value="sports"/>
+                                Sports
+                            </label>
+                        </td>
+                    
+                        <td><!--balise colonne - column-->
+                            <label>
+                                <input name="activite" type="checkbox" id="activite" value="musique"/>
+                                Musique
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><!--balise colonne - column-->
+                            <label>
+                                <input name="activite" type="checkbox" id="activite" value="geek"/>
+                                Geek
+                            </label>
+                        </td>
+                    
+                        <td><!--balise colonne - column-->
+                            <label>
+                                <input name="activite" type="checkbox" id="activite" value="lancer de nains" checked/>
+                                Lancer de nains
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><!--balise colonne - column-->
+                            <label>
+                                <input name="activite" type="checkbox" id="activite" value="zzz" checked="on"/>
+                                ZZZZ
+                            </label>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Moyen de locomotion</legend>
+                <p>Avez-vous le permis de conduire ?<br/>
+                <!-- Lors question checkbox, radio, ... /!\ id = identique -->
+                    <label>
+                        <input name="permis" id="permis" type="radio" value="oui"/>
+                        Oui
+                    </label>
+                    <label>
+                        <input name="permis" id="permis" type="radio" value="non"/>
+                        Non
+                    </label>
+                </p>
+                <p>Avez-vous un véhicule ?<br/>
+                <!-- Lors question checkbox, radio, ... /!\ id = identique -->
+                    <label>
+                        <input name="vehicule" id="vehicule" type="radio" value="oui"/>
+                        Oui
+                    </label>
+                    <label>
+                        <input name="vehicule" id="vehicule" type="radio" value="non"/>
+                        Non
+                    </label>
+                </p>
+            </fieldset>
+            <br/>
+            <br/>
+            <fieldset>
+                <legend>Traitement du formulaire</legend>
+                <label>
+                    <input type="submit" name="envoyer" id="envoyer" value="Envoyer"/>
+                </label>
+                <label>
+                    <input type="reset" name="init" id="init" value="Réinitialiser"/>
+                </label>
+            </fieldset>
+        </form>
+    </body>
+</html>
